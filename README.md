@@ -17,7 +17,8 @@ Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
 4. buat user `htpasswd -c /etc/squid/passwd userta_t15`
 5. input password `inipassw0rdta_t15`
 6. buat konfig `nano /etc/squid/squid.conf` dan input :
-   ```http_port 8080 // http_port 8080 : Port yang digunakan untuk mengakses proxy, dalam kasus ini adalah 8080.
-   visible_hostname mojokerto // visible_hostname mojokerto : Nama proxy yang akan terlihat oleh user
+
+```http_port 8080 // http_port 8080 : Port yang digunakan untuk mengakses proxy, dalam kasus ini adalah 8080.
+visible_hostname mojokerto // visible_hostname mojokerto : Nama proxy yang akan terlihat oleh user
 ```
 
