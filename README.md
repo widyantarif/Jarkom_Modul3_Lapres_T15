@@ -91,7 +91,7 @@ Hasil **SIDOARJO**
 - Client mendapatkan DNS **Malang** dan DNS **202.46.129.2** dari DHCP.
 - Client di **Subnet 1** mendapatkan peminjaman alamat IP selama 10 menit.
 
-## Jawaban
+### Jawaban 
 1. Pada UML dhcp-server atau **TUBAN** buka file ```nano /etc/dhcp/dhcpd.conf```
 2. Ketikkan script seperti dibawah: 
 
@@ -127,7 +127,7 @@ User : userta_yyy
 Password : inipassw0rdta_yyy
 Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
 
-### Jawaban 7
+### Jawaban 
 1. Install squid `apt-get install squid`
 2. Install apache `apt-get install apache2-utils`
 3. backup file konfigurasi default squid `mv /etc/squid/squid.conf /etc/squid/squid.conf.bak`
@@ -152,7 +152,7 @@ Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
  (8) setiap hari Selasa-Rabu pukul 13.00-18.00. Bu Meguri membatasi penggunaan internet Anri hanya pada jadwal yang telah ditentukan itu saja. Maka diluar jam tersebut, Anri tidak dapat mengakses jaringan internet dengan proxy tersebut. Jadwal bimbingan dengan Bu Meguri adalah 
  (9) setiap hari Selasa-Kamis pukul 21.00 - 09.00 keesokan harinya (sampai Jumat jam 09.00). Agar Anri bisa fokus mengerjakan TA
  
- ### Jawaban 8 dan 9
+ ### Jawaban 
 1. buat dan edit file acl `nano /etc/squid/acl.conf`
 input dengan aturan acl 
 
@@ -162,7 +162,7 @@ menambahkann http access
 ## Soal 10 
 (10) setiap dia mengakses google.com, maka akan di redirect menuju monta.if.its.ac.id agar Anri selalu ingat untuk mengerjakan TA
 
-### Jawaban 10
+### Jawaban 
 1. Edit file `nano /etc/squid/squid.conf`
 2. tambahkan konfigurasi  acl 
 
@@ -170,7 +170,7 @@ menambahkann http access
 ## Soal 11
 Untuk menandakan bahwa Proxy Server ini adalah Proxy yang dibuat oleh Anri, (11) Bu Meguri meminta Anri untuk mengubah error page default squid
 
-### Jawaban 11
+### Jawaban 
 1. download file `wget 10.151.36.202/ERR_ACCESS_DENIED`
 2. copy ke folder error `cp-r nama file /usr/share/squid/errors/English`
 3. command semua line pada `nano /etc/squid/squid.conf` tambahin `http_access deny all`
@@ -181,7 +181,7 @@ Untuk menandakan bahwa Proxy Server ini adalah Proxy yang dibuat oleh Anri, (11)
 (12) Karena Bu Meguri dan Anri adalah tipe orang pelupa, maka untuk memudahkan mereka, Anri memiliki ide ketika menggunakan proxy cukup dengan mengetikkan domain janganlupa-ta.yyy.pw dan memasukkan port 8080. 
 Keterangan : yyy adalah nama kelompok masing-masing. Contoh: janganlupa-ta.c01.pw
 
-## Jawaban 12
+### Jawaban 
 1. di uml malang , install bind9 `apt-get install bind9 -y`
 2. nano /etc/bind/named.conf.local. input dengan berikut :
 3. Buat folder jarkom di dalam `nano /etc/bind mkdir /etc/bind/jarkom`
