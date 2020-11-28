@@ -121,13 +121,13 @@ Hasil **MADIUN**
 
 
 
-## Soal7
+## Soal 7
 Pertama, akses ke proxy hanya bisa dilakukan oleh Anri sendiri sebagai user TA. (7) User autentikasi milik Anri memiliki format:
 User : userta_yyy
 Password : inipassw0rdta_yyy
 Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
 
-## Jawaban7
+## Jawaban 7
 1. Install squid `apt-get install squid`
 2. Install apache `apt-get install apache2-utils`
 3. backup file konfigurasi default squid `mv /etc/squid/squid.conf /etc/squid/squid.conf.bak`
@@ -135,7 +135,57 @@ Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
 5. input password `inipassw0rdta_t15`
 6. buat konfig `nano /etc/squid/squid.conf` dan input :
 
-        http_port 8080 // http_port 8080 : Port yang digunakan untuk mengakses proxy, dalam kasus ini adalah 8080.
-        visible_hostname mojokerto // visible_hostname mojokerto : Nama proxy yang akan terlihat oleh user
+        http_port 8080
+        visible_hostname mojokerto
+        auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/passwd 
+        auth_param basic children 5 
+        auth_param basic realm Proxy
+        auth_param basic credentialsttl 2 hours berlaku
+        auth_param basic casesensitive on 
+        acl USERS proxy_auth REQUIRED
+        http_access allow USERS 
+ 
+ 7. service squid restart
+ 
+ 
+ ## Soal 8 dan 9
+ (8) setiap hari Selasa-Rabu pukul 13.00-18.00. Bu Meguri membatasi penggunaan internet Anri hanya pada jadwal yang telah ditentukan itu saja. Maka diluar jam tersebut, Anri tidak dapat mengakses jaringan internet dengan proxy tersebut. Jadwal bimbingan dengan Bu Meguri adalah 
+ (9) setiap hari Selasa-Kamis pukul 21.00 - 09.00 keesokan harinya (sampai Jumat jam 09.00). Agar Anri bisa fokus mengerjakan TA
+ 
+ ## Jawaban 8 dan 9
+1. buat dan edit file acl `nano /etc/squid/acl.conf`
+input dengan aturan acl 
 
+2. edit file konfigurasi `nano /etc/squid/squid.conf`
+menambahkann http access
+
+## Soal 10 
+(10) setiap dia mengakses google.com, maka akan di redirect menuju monta.if.its.ac.id agar Anri selalu ingat untuk mengerjakan TA
+
+## Jawaban 10
+1. Edit file `nano /etc/squid/squid.conf`
+2. tambahkan konfigurasi  acl 
+
+
+## Soal 11
+Untuk menandakan bahwa Proxy Server ini adalah Proxy yang dibuat oleh Anri, (11) Bu Meguri meminta Anri untuk mengubah error page default squid
+
+## Jawaban 11
+1. download file `wget 10.151.36.202/ERR_ACCESS_DENIED`
+2. copy ke folder error `cp-r nama file /usr/share/squid/errors/English`
+3. command semua line pada `nano /etc/squid/squid.conf` tambahin `http_access deny all`
+4. exit lalu restart squid `service squid restart`
+
+
+## Soal 12
+(12) Karena Bu Meguri dan Anri adalah tipe orang pelupa, maka untuk memudahkan mereka, Anri memiliki ide ketika menggunakan proxy cukup dengan mengetikkan domain janganlupa-ta.yyy.pw dan memasukkan port 8080. 
+Keterangan : yyy adalah nama kelompok masing-masing. Contoh: janganlupa-ta.c01.pw
+
+## Jawaban 12
+1. di uml malang , install bind9 `apt-get install bind9 -y`
+2. nano /etc/bind/named.conf.local. input dengan berikut :
+3. Buat folder jarkom di dalam `nano /etc/bind mkdir /etc/bind/jarkom`
+4. `cp /etc/bind/db.local /etc/bind/jarkom/janganlupa-ta.t15.pw`
+5. `nano /etc/bind/jarkom/janganlupa-ta.t15.pw`, kemudian ubah settingan mengarah ke ip mojo
+6. Restart bind9 dengan perintah `service bind9 restart`
 
