@@ -46,7 +46,7 @@ Gunakan perintah ```sysctl -p``` untuk mengaktifkan perubahan.
 ## Soal 1
 Seluruh client TIDAK DIPERBOLEHKAN menggunakan konfigurasi IP Statis.
 
-## Jawaban
+### Jawaban
 1. Ketikkan perintah ```nano /etc/network/interfaces``` untuk setiap client (**GRESIK, SIDOARJO, BANYUWANGI, MADIUN**)
 2. Lalu tambahkan script seperti dibawah: 
 
@@ -57,7 +57,7 @@ Seluruh client TIDAK DIPERBOLEHKAN menggunakan konfigurasi IP Statis.
 - Client mendapatkan DNS **Malang** dan DNS **202.46.129.2** dari DHCP.
 - Client di **Subnet 1** mendapatkan peminjaman alamat IP selama 5 menit.
 
-## Jawaban
+### Jawaban
 1. Pada UML dhcp-server atau **TUBAN** buka file ```nano /etc/dhcp/dhcpd.conf```
 2. Ketikkan script seperti dibawah: 
 
