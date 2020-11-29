@@ -147,11 +147,13 @@ Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
  
  ![no7](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/squid%20config.png)
  
+  7. service squid restart
+ 
   ![no7](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/7%20test.png)
   
    ![no7](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/7%20testt.png)
  
- 7. service squid restart
+
  
  
  ## Soal 8 dan 9
