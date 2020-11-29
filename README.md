@@ -145,7 +145,11 @@ Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
         acl USERS proxy_auth REQUIRED
         http_access allow USERS 
  
- ![no10](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/squid%20config.png)
+ ![no7](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/squid%20config.png)
+ 
+  ![no7](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/7%20test.png)
+  
+   ![no7](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/7%20testt.png)
  
  7. service squid restart
  
@@ -161,7 +165,7 @@ input dengan aturan acl
 2. edit file konfigurasi `nano /etc/squid/squid.conf`
 menambahkann #TIMEACCESS
 
-![no10](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/squid%20config.png)
+![no89](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/squid%20config.png)
 
 ## Soal 10 
 (10) setiap dia mengakses google.com, maka akan di redirect menuju monta.if.its.ac.id agar Anri selalu ingat untuk mengerjakan TA
