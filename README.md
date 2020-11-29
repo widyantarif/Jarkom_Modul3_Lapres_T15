@@ -183,7 +183,7 @@ Keterangan : yyy adalah nama kelompok masing-masing. Contoh: janganlupa-ta.c01.p
 
 ### Jawaban 
 1. di uml malang , install bind9 `apt-get install bind9 -y`
-2. nano /etc/bind/named.conf.local. input dengan berikut :
+2. `nano /etc/bind/named.conf.local` input dengan berikut :
 3. Buat folder jarkom di dalam `nano /etc/bind mkdir /etc/bind/jarkom`
 4. `cp /etc/bind/db.local /etc/bind/jarkom/janganlupa-ta.t15.pw`
 5. `nano /etc/bind/jarkom/janganlupa-ta.t15.pw`, kemudian ubah settingan mengarah ke ip mojo
