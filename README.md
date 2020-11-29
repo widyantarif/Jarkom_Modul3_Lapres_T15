@@ -133,7 +133,7 @@ Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
 3. backup file konfigurasi default squid `mv /etc/squid/squid.conf /etc/squid/squid.conf.bak`
 4. buat user `htpasswd -c /etc/squid/passwd userta_t15`
 5. input password `inipassw0rdta_t15`
-6. buat konfig `nano /etc/squid/squid.conf` dan input :
+6. buat konfig `nano /etc/squid/squid.conf` dan input #LOGIN USERPASS:
 
         http_port 8080
         visible_hostname mojokerto
@@ -144,6 +144,8 @@ Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
         auth_param basic casesensitive on 
         acl USERS proxy_auth REQUIRED
         http_access allow USERS 
+ 
+ ![no10](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/squid%20config.png)
  
  7. service squid restart
  
@@ -157,14 +159,20 @@ Keterangan : yyy adalah nama kelompok masing-masing. Contoh: userta_c01
 input dengan aturan acl 
 
 2. edit file konfigurasi `nano /etc/squid/squid.conf`
-menambahkann http access
+menambahkann #TIMEACCESS
+
+![no10](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/squid%20config.png)
 
 ## Soal 10 
 (10) setiap dia mengakses google.com, maka akan di redirect menuju monta.if.its.ac.id agar Anri selalu ingat untuk mengerjakan TA
 
 ### Jawaban 
 1. Edit file `nano /etc/squid/squid.conf`
-2. tambahkan konfigurasi  acl 
+2. tambahkan konfigurasi  acl #REDIRECT
+
+![no10](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/squid%20config.png)
+
+![no10](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/10%20test.png)
 
 
 ## Soal 11
@@ -176,6 +184,7 @@ Untuk menandakan bahwa Proxy Server ini adalah Proxy yang dibuat oleh Anri, (11)
 3. command semua line pada `nano /etc/squid/squid.conf` tambahin `http_access deny all`
 4. exit lalu restart squid `service squid restart`
 
+![no11](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/11%20test.png)
 
 ## Soal 12
 (12) Karena Bu Meguri dan Anri adalah tipe orang pelupa, maka untuk memudahkan mereka, Anri memiliki ide ketika menggunakan proxy cukup dengan mengetikkan domain janganlupa-ta.yyy.pw dan memasukkan port 8080. 
@@ -183,9 +192,15 @@ Keterangan : yyy adalah nama kelompok masing-masing. Contoh: janganlupa-ta.c01.p
 
 ### Jawaban 
 1. di uml malang , install bind9 `apt-get install bind9 -y`
-2. `nano /etc/bind/named.conf.local` input dengan berikut :
+2. `nano /etc/bind/named.conf.local` input seperti berikut :
+
+![no12](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/12%20named.conf.local.png)
+
 3. Buat folder jarkom di dalam `nano /etc/bind mkdir /etc/bind/jarkom`
 4. `cp /etc/bind/db.local /etc/bind/jarkom/janganlupa-ta.t15.pw`
 5. `nano /etc/bind/jarkom/janganlupa-ta.t15.pw`, kemudian ubah settingan mengarah ke ip mojo
+
+![no12](https://github.com/widyantarif/Jarkom_Modul3_Lapres_T15/blob/main/gambar/janganlupa-ta.t15.pw.png)
+
 6. Restart bind9 dengan perintah `service bind9 restart`
 
